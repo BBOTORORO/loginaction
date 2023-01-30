@@ -17,10 +17,9 @@
 	${user.name } 님 환영합니다.<br>
 	<a href="logout.hrd">로그아웃</a>
 	</c:if>
-	<a href ="join.hrd"></a>
 <hr>
-
-
-
+<li>
+	<a href="join.hrd">회원가입</a>
+</li>
 </body>
 </html>
