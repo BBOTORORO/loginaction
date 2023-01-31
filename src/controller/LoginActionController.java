@@ -28,7 +28,6 @@ public class LoginActionController implements Controller {
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		SqlSession mapper = SqlSessionBean.getSession();
 	 	NewMemberMybatisDao dao =  NewMemberMybatisDao.getInstance();
 	 	
 	 
@@ -49,11 +48,9 @@ public class LoginActionController implements Controller {
 		if(id.equals("id") && password.equals("password")) {
 			session.setAttribute("userid", id);
 		
-		response.sendRedirect(request.getContextPath());
 		out.print("<script>");
 		out.print("alert('로그인 성공!');");
 		out.print("</script>");
-		mapper.close();
 		}
 	}
 
